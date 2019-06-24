@@ -7,7 +7,7 @@ install:
   - ps: md -Force C:\cache
   - cmd: curl -L -o C:\cache\sbcl.msi "http://prdownloads.sourceforge.net/sbcl/sbcl-1.4.14-x86-64-windows-binary.msi"
   - cmd: curl -L -o C:\cache\ccl.zip "https://github.com/Clozure/ccl/releases/download/v1.11.5/ccl-1.11.5-windowsx86.zip"
-  - ps: Expand-Archive -Verbose C:\cache\ccl.zip C:\cache\
+  - ps: Expand-Archive -Force -Verbose C:\cache\ccl.zip C:\cache\
   - cmd: curl -L -o C:\cache\quicklisp.lisp "https://beta.quicklisp.org/quicklisp.lisp"
   - cmd: start /wait msiexec /i C:\cache\sbcl.msi /quiet /qn /norestart /log sbcl-install.log INSTALLDIR=C:\cache\sbcl
   - cmd: C:\Cache\sbcl\sbcl --non-interactive --load C:\cache\quicklisp.lisp --eval "(quicklisp-quickstart:install)" --eval "(ql-util:without-prompting (ql:add-to-init-file))"
