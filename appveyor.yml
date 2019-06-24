@@ -8,6 +8,7 @@ environment:
   SBCL_HOME: 'C:\Program Files\Steel Bank Common Lisp\1.4.14\'
 install:
   - cmd: curl -L -o %CACHE%\sbcl.msi http://prdownloads.sourceforge.net/sbcl/sbcl-1.4.14-x86-64-windows-binary.msi
+  - cmd: dir
   - cmd: curl -L -o %CACHE%\quicklisp.lisp "https://beta.quicklisp.org/quicklisp.lisp"
   - cmd: start /wait msiexec /i %CACHE%\sbcl.msi /quiet /qn /norestart /log sbcl-install.log
   - cmd: $SBCL_HOME\sbcl --version
