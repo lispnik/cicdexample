@@ -3,4 +3,4 @@ build:
   verbosity: minimal
 install:
   - cmd: curl -L -o sbcl.msi http://prdownloads.sourceforge.net/sbcl/sbcl-1.4.14-x86-64-windows-binary.msi
-  - cmd: msiexec /i sbcl.msi /quiet /qn /norestart
+  - cmd: msiexec /i sbcl.msi /quiet /qn /norestart /Lv
