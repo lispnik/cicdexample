@@ -11,7 +11,7 @@ install:
   - cmd: curl -L -o C:\cache\quicklisp.lisp "https://beta.quicklisp.org/quicklisp.lisp"
   - cmd: start /wait msiexec /i C:\cache\sbcl.msi /quiet /qn /norestart /log sbcl-install.log INSTALLDIR=C:\cache\sbcl
   - cmd: C:\Cache\sbcl\sbcl --non-interactive --load C:\cache\quicklisp.lisp --eval "(quicklisp-quickstart:install)" --eval "(ql-util:without-prompting (ql:add-to-init-file))"
-  - cmd: C:\Cache\ccl\wx86cl64 --load C:\cache\quicklisp.lisp --eval "(ignore-errors (quicklisp-quickstart:install))" --eval "(ql-util:without-prompting (ql:add-to-init-file))" --batch
+  - cmd: C:\Cache\ccl\wx86cl64 --load %USERPROFILE%\.sbclrc --eval "(ql-util:without-prompting (ql:add-to-init-file))" --batch
 
 build: off
 test: off
