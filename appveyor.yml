@@ -2,5 +2,5 @@ version: 1.0.{build}
 build:
   verbosity: minimal
 install:
-  - cmd: curl -o roswell.zip https://github.com/roswell/roswell/releases/download/v19.06.10.100/roswell_19.06.10.100_amd64.zip
+  - cmd: curl -l -o roswell.zip https://github.com/roswell/roswell/releases/download/v19.06.10.100/roswell_19.06.10.100_amd64.zip
   - cmd: unzip roswell.zip
