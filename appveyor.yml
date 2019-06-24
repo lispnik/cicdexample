@@ -4,7 +4,7 @@ cache:
 environment: 
   SBCL_HOME: 'C:\cache\sbcl'
 install:
-  - cmd: mkdir C:\cache
+  - ps: md -Force C:\cache
   - cmd: curl -L -o C:\cache\sbcl.msi "http://prdownloads.sourceforge.net/sbcl/sbcl-1.4.14-x86-64-windows-binary.msi"
   - cmd: curl -L -o C:\cache\ccl.zip "https://github.com/Clozure/ccl/releases/download/v1.11.5/ccl-1.11.5-windowsx86.zip"
   - ps: Expand-Archive C:\cache\ccl.zip C:\cache\
