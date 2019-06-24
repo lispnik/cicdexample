@@ -1,3 +1,6 @@
 version: 1.0.{build}
 build:
   verbosity: minimal
+install:
+  - cmd: wget https://github.com/roswell/roswell/releases/download/v19.06.10.100/roswell_19.06.10.100_amd64.zip
+  - cmd: unzip roswell_19.06.10.100_amd64.zip
