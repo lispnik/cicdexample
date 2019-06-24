@@ -6,7 +6,7 @@ cache:
 environment: 
   SBCL_HOME: 'C:\cache\sbcl'
 install:
-  - cmd: mkdir %CACHE%
+  - cmd: mkdir C:\cache
   - cmd: curl -L -o C:\cache\sbcl.msi "http://prdownloads.sourceforge.net/sbcl/sbcl-1.4.14-x86-64-windows-binary.msi"
   - cmd: curl -L -o C:\cache\quicklisp.lisp "https://beta.quicklisp.org/quicklisp.lisp"
   - cmd: start /wait msiexec /i C:\cache\sbcl.msi /quiet /qn /norestart /log sbcl-install.log INSTALLDIR=C:\cache\sbcl
