@@ -4,8 +4,8 @@ build:
 cache:
   - 'C:\cache'
 environment: 
-  - CACHE: 'C:\cache'
-  - SBCL_HOME: 'C:\Program Files\Steel Bank Common Lisp\1.4.14\'
+  CACHE: 'C:\cache'
+  SBCL_HOME: 'C:\Program Files\Steel Bank Common Lisp\1.4.14\'
 install:
   - cmd: curl -L -o %CACHE%\sbcl.msi http://prdownloads.sourceforge.net/sbcl/sbcl-1.4.14-x86-64-windows-binary.msi
   - cmd: curl -L -o %CACHE%\quicklisp.lisp "https://beta.quicklisp.org/quicklisp.lisp"
