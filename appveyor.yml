@@ -4,5 +4,6 @@ build:
 install:
   - cmd: curl -L -o roswell.zip https://github.com/roswell/roswell/releases/download/v19.06.10.100/roswell_19.06.10.100_amd64.zip
   - cmd: unzip roswell.zip
+  - cmd: roswell\ros
   - cmd: roswell\ros install sbcl-bin
   - cmd: roswell\ros install ccl-bin
