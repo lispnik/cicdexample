@@ -10,6 +10,5 @@ install:
   - cmd: mkdir %CACHE%
   - cmd: curl -L -o %CACHE%\sbcl.msi http://prdownloads.sourceforge.net/sbcl/sbcl-1.4.14-x86-64-windows-binary.msi
   - cmd: curl -L -o %CACHE%\quicklisp.lisp "https://beta.quicklisp.org/quicklisp.lisp"
-  - cmd: start /wait msiexec /i %CACHE%\sbcl.msi /quiet /qn /norestart /log sbcl-install.log
-  - cmd: dir %SBCL_HOME%
-#  - cmd: "%SBCL_HOME%\sbcl" --version
+  - cmd: start /wait msiexec /i %CACHE%\sbcl.msi /quiet /qn /norestart /log sbcl-install.log INSTALLDIR=%CACHE%\sbcl"
+  - cmd: dir %CACHE%
